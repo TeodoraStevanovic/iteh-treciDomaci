@@ -1,22 +1,52 @@
 
 import React from 'react';
-import { BsSuitHeart } from "react-icons/bs";
-const OneCar = () => {
-    
+
+import { BiLike,BiDislike } from "react-icons/bi";
+//const OneCar = (props) => {
+  //u zagrade stavljamo objekat koji hocemo da izvucemo iz propsa
+  function OneCar({car,onAdd,onDelete, inLikedCars}){
+        
     return (
-      <div className="card">
+        <div className={inLikedCars === 1 ? "card" : "card-liked"}>
         <img
-          className="card-img-top"
-          src="https:/picsum.photos/200"
+          className={inLikedCars ===1 ? "card-img-top" :"card-img-left"}
+          src={car.img}
           alt="slika automobila "
         />
-        <div className="card-body">
-          <h1 className="card-title">Car name</h1>
-          <p className="card-text">This is description of the products.</p>
+        <div className={inLikedCars === 1 ? "card-body" : "card-body-left"}>
+          {inLikedCars === 1 ? (
+        <>
+         <h1 className="card-title">{car.title}</h1>
+          <p className="card-text">{car.description}</p>
+        
+        </>
+      ) : (
+        <>
+         <h1 className="card-title">{car.title}</h1>
+          <p className="card-text">{car.description}</p>
+          <h2 >Ukupan broj lajkova: {car.amount}</h2>
+        </>
+      )}
         </div>
-        <button className="btn">
-          <BsSuitHeart />
-        </button>
+   
+{inLikedCars === 1 ? (
+        <>
+          <button
+            className="btn" id='prvoDugme'
+            onClick={() => onAdd(car.title, car.id)}
+          >
+            <BiLike />
+          </button>
+          <button className="btn"
+          onClick={() => onDelete(car.title, car.id)}
+          >
+            <BiDislike />
+          </button>
+        </>
+      ) : (
+       <>
+       </>
+      )}
       </div>
     );
 };

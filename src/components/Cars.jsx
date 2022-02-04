@@ -1,12 +1,17 @@
 import React from 'react';
 import OneCar from "./OneCar.jsx";
 
-const Cars = () => {
+  const Cars = ({cars , onAdd, onDelete }) => {
+   
+
     return (
         <div className="all-cars">
-          <OneCar />
-          <OneCar />
-          <OneCar/>
+          
+            {cars.map((c) => (
+              //jedinica znaci da nije u korpi
+        <OneCar car={c} key={c.id} onAdd={onAdd} onDelete={onDelete} inLikedCars={1}/>
+      ))}
+     
         </div>
       );
     };

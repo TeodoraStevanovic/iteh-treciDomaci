@@ -21,6 +21,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: orangered;
   margin-left: 30px;
 }
 
@@ -33,7 +34,7 @@ body {
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-left: 5px;
+  margin-left: 20px;
 }
 
 .all-cars {
@@ -42,47 +43,50 @@ body {
 }
 
 .card {
-  background-color: orangered;
+  background-color: rgba(0, 0, 0, 0.507);
   border-style: solid;
-  border-width: 2px;
-  border-color: orangered;
+  border-width: 3px;
+  border-color: rgba(255, 68, 0, 0.925);
   border-radius: 10%;
-  max-width: 600px;
-  margin: 80px;
+  max-width: 400px;
+  margin: 90px 80px 100px 100px;
 }
 
 .card-img-top {
   border-top-right-radius: 12%;
   border-top-left-radius: 12%;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
 }
-
+.card-text {
+  font-size: 20px;
+}
 .card-body {
+  color: whitesmoke;
   margin: 10px;
   align-self: center;
   align-content: center;
   text-align: center;
   align-items: center;
 }
-
+#prvoDugme {
+  margin-left: 155px;
+}
 .btn {
-  background-color: black;
+  background-color: orangered;
   color: white;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 3px;
-  margin-left: 200px;
-  margin-bottom: 4px;
+  border-radius: 5px;
+  padding-top: 13px;
+  padding-bottom: 7px;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin: 6px;
   align-content: center;
   text-align: center;
   align-items: center;
-  border: none;
+  border: 2px solid orangered;
   cursor: pointer;
 }
-
 .navName {
   color: orangered;
   font-size: 4.5vh;
@@ -94,25 +98,41 @@ a {
   cursor: pointer;
 }
 .naslov1 {
-  margin-left: 770px;
+  margin-left: 750px;
   color: orangered;
   margin-bottom: -45px;
 }
+
 .liked-container {
-  margin: 20px;
+  margin-left: 150px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-right: 20px;
 }
 
 .card-liked {
-  display: flex;
-  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.507);
   border-style: solid;
-  border-width: 2px;
-  border-color: rgb(211, 211, 211);
-  border-radius: 10px;
-  max-width: 500px;
+  border-width: 3px;
+  border-color: rgba(255, 68, 0, 0.938);
+  border-radius: 15%;
+  flex-direction: row;
+  max-width: 800px;
+  max-height: 400px;
+  margin-bottom: 50px;
 }
 
 .card-img-left {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  width: 390px;
+  height: 390px;
+  margin: 2px;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+}
+.card-body-left {
+  margin-top: 80px;
+  margin-right: 20px;
+  color: white;
+
+  float: right;
 }
