@@ -58,18 +58,19 @@ function App() {
   });
   refreshLiked();}
   
-  function removeCar(title,id) {
-    if (likedNum > 0) {
-    console.log("Dislajkovan je auto: " + title);
-  setLikedNum(likedNum -1);
+  function removeCar(title,id) { 
   cars.forEach((c) => {
     if (c.id === id) {
+ if (c.amount > 0) {
+    console.log("Dislajkovan je auto: " + title);
+  setLikedNum(likedNum -1); 
       c.amount--;
-    }
+    }else{alert("Broj lajkova je vec 0." );
+ }
+  }
     console.log(c.amount);
-});}
-   else{alert("Broj lajkova je vec 0." );
- }   refreshLiked();}  
+});
+      refreshLiked();}  
 
 
   return (
